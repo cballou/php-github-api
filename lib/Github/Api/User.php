@@ -25,6 +25,17 @@ class User extends AbstractApi
     }
 
     /**
+     * Retrieve all github users:
+     * @link http://developer.github.com/v3/users/#get-all-users
+     *
+     * @return array           list of users found
+     */
+    public function all()
+    {
+        return $this->get('users/');
+    }
+
+    /**
      * Get extended information about a user by its username
      * @link http://developer.github.com/v3/users/
      *
